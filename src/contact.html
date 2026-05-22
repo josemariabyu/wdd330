@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sleep Outside</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header id="main-header" style="padding: 1rem; background: #303030; color: white;">
+        <div class="logo">
+            <a href="/index.html" style="color: white; text-decoration: none; font-weight: bold;">Sleep Outside</a>
+        </div>
+    </header>
+
+    <main style="padding: 2rem; max-width: 600px; margin: 0 auto; font-family: sans-serif;">
+        <h1>Contact Us</h1>
+        <p>Have questions about our outdoor gear? Reach out to us!</p>
+        
+        <form style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+            <label style="display: flex; flex-direction: column; gap: 0.5rem;">
+                Name:
+                <input type="text" name="name" required style="padding: 0.5rem; border: 1px solid #ccc;">
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 0.5rem;">
+                Email:
+                <input type="email" name="email" required style="padding: 0.5rem; border: 1px solid #ccc;">
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 0.5rem;">
+                Message:
+                <textarea name="message" rows="5" required style="padding: 0.5rem; border: 1px solid #ccc;"></textarea>
+            </label>
+            <button type="submit" style="padding: 0.75rem; background-color: #303030; color: white; border: none; cursor: pointer;">Send Message</button>
+        </form>
+    </main>
+
+    <footer id="main-footer" style="text-align: center; padding: 1rem; margin-top: 2rem; background: #f4f4f4;">
+        <p>&copy; Sleep Outside. All rights reserved.</p>
+    </footer>
+</body>
+</html>
