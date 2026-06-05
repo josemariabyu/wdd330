@@ -56,11 +56,54 @@
       </div>
     </header>
 
-    <main class="divider">
-      <section class="products">
+        <main class="divider">
+      <section class="checkout-container">
         <h2>Review & Place your Order</h2>
+        
+        <form name="checkout-form" id="checkout-form">
+          <fieldset>
+            <legend>Shipping Address</legend>
+            
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required placeholder="John">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required placeholder="Doe">
+
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" required placeholder="123 Main St">
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required placeholder="Rexburg">
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required placeholder="ID">
+
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" required placeholder="83440">
+          </fieldset>
+
+          <fieldset>
+            <legend>Payment</legend>
+            
+            <label for="cardNumber">Credit Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234567890123456">
+
+            <label for="expiration">Expiration Date</label>
+            <input type="text" id="expiration" name="expiration" required placeholder="MM/YY">
+
+            <label for="code">Security Code</label>
+            <input type="text" id="code" name="code" required placeholder="123">
+          </fieldset>
+
+          <button type="submit" id="checkoutSubmit">Place Order</button>
+        </form>
       </section>
     </main>
+
+    <!-- Vinculamos tu archivo JS limpio -->
+    <script type="module" src="checkout.js"></script>
+
 
     <footer>&copy;NOT a real business</footer>
   </body>

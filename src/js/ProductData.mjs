@@ -1,8 +1,9 @@
-function convertToJson(res) {
+async function convertToJson(res) {
+  const jsonResponse = await res.json();
   if (res.ok) {
-    return res.json();
+    return jsonResponse;
   } else {
-    throw new Error("Bad Response");
+    throw { name: 'servicesError', message: jsonResponse };
   }
 }
 
@@ -20,4 +21,15 @@ export default class ProductData {
     const products = await this.getData();
     return products.find((item) => item.Id === id);
   }
+async checkout(payload) {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  };
+  const res = await fetch('https://onrender.com', options);
+  return await convertToJson(res);
+ }
 }
